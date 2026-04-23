@@ -17,7 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    private final String[] PUBLIC_URLS = {"/css/**", "/js/**", "/image/**","/home/**", "/login", "/register"};
+    private final String[] PUBLIC_URLS = {"/css/**", "/js/**", "/image/**", "/home", "/home/**", "/login", "/register"};
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -39,7 +39,7 @@ public class SecurityConfig {
                         formLogin
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/default")
+                                .defaultSuccessUrl("/default", true)
                                 .failureUrl("/login?error=true")
                                 .permitAll()
                 )
