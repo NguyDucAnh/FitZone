@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="first commit">
+    <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="change DefaultController and SecurityController">
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/admin.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/create.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/management.html" afterDir="false" />
@@ -12,7 +12,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/view.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/information.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/introduce.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/login.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -35,18 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "NguyDucAnh"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NguyDucAnh&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/NguyDucAnh/FitZone",
-    "accountId": "593e06fe-0d8b-4709-8b85-b09c88120f50"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NguyDucAnh/FitZone&quot;,
+    &quot;accountId&quot;: &quot;593e06fe-0d8b-4709-8b85-b09c88120f50&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -55,33 +54,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.FitZoneApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaWeb/FitZone/src/main/java/com/fitzone.fitzone&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaWeb/FitZone/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FitZoneApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JavaWeb/FitZone/src/main/resources/templates/web",
+    "onboarding.tips.debug.path": "D:/JavaWeb/FitZone/src/main/java/org/example/Main.java"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\web" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\user" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
       <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone" />
       <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone\repository\customer" />
-      <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone\repository" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\web" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\static\image" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -118,12 +119,21 @@
       <option name="project" value="LOCAL" />
       <updated>1776954483913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change DefaultController and SecurityConfig">
+      <option name="closed" value="true" />
+      <created>1776956047684</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1776956047684</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="change DefaultController and SecurityConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="change DefaultController and SecurityConfig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
