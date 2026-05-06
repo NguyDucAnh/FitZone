@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="Update QLSP">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/upload/ExcelProductHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/upload/ProductExcelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/GetUserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/GetUserAuthentication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,31 +53,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.FitZoneApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaWeb/FitZone/src/main/resources/templates/web&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaWeb/FitZone/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FitZoneApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JavaWeb/FitZone/src/main/java/com/fitzone.fitzone/utils",
+    "onboarding.tips.debug.path": "D:/JavaWeb/FitZone/src/main/java/org/example/Main.java"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JAVA&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone\utils" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\web" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\user" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\product" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JavaWeb\FitZone\src\main\resources\static\image" />
@@ -80,11 +88,11 @@
       <recent name="com.fitzome.fitzome.dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fitzone.fitzone.utils" />
       <recent name="com.fitzone.fitzone.service.impl" />
       <recent name="com.fitzone.fitzone.service" />
       <recent name="com.fitzone.fitzone.repository.customer" />
       <recent name="com.fitzone.fitzone.repository.customer.impl" />
-      <recent name="com.fitzone.fitzone.repository" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -126,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778077951410</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update QLSP">
+      <option name="closed" value="true" />
+      <created>1778078391249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778078391249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
