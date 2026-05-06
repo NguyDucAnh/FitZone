@@ -22,7 +22,7 @@ public class AuthenticationController {
     @GetMapping("/login")
     public ModelAndView login() {
         return new ModelAndView("web/login")
-                .addObject("login", new LoginRequest());
+                   .addObject("login", new LoginRequest());
     }
 
 

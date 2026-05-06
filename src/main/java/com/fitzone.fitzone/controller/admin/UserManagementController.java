@@ -47,14 +47,14 @@ public class UserManagementController {
     public ModelAndView createUser() {
 
         return new ModelAndView("admin/user/create")
-                .addObject("newUser", new CreateUserRequest())
-                .addObject("genders", GenderEnum.values());
+                    .addObject("newUser", new CreateUserRequest())
+                    .addObject("genders", GenderEnum.values());
     }
 
     @PostMapping("/create")
     public ModelAndView createUser(@ModelAttribute("newUser") @Valid CreateUserRequest newUser,
-                                   @RequestParam("file") MultipartFile file,
-                                   BindingResult result, Model model) {
+                             @RequestParam("file") MultipartFile file,
+                             BindingResult result, Model model) {
         if(result.hasErrors()){
             String enumKey = result.getFieldError().getDefaultMessage();
             model.addAttribute("notification", "Fail");
@@ -69,23 +69,23 @@ public class UserManagementController {
         }
 
         return new ModelAndView("admin/user/management")
-                .addObject("users", userService.getUsers());
+                    .addObject("users", userService.getUsers());
     }
 
     // Update User
     @GetMapping("/update/{userId}")
     public ModelAndView updateUser(@PathVariable Long userId) {
         return new ModelAndView("admin/user/update")
-                .addObject("user", userService.getUserById(userId))
-                .addObject("updateUser", new UpdateUserRequest())
-                .addObject("genders", GenderEnum.values());
+                    .addObject("user", userService.getUserById(userId))
+                    .addObject("updateUser", new UpdateUserRequest())
+                    .addObject("genders", GenderEnum.values());
     }
 
     @PostMapping("/update/{userId}")
     public ModelAndView updateUser(@ModelAttribute @Valid UpdateUserRequest updateUser,
-                                   @RequestParam("file") MultipartFile file,
-                                   @PathVariable Long userId, BindingResult result,
-                                   Model model) {
+                            @RequestParam("file") MultipartFile file,
+                            @PathVariable Long userId, BindingResult result,
+                            Model model) {
         if(result.hasErrors()){
             String enumKey = result.getFieldError().getDefaultMessage();
             model.addAttribute("notification", "Fail");
@@ -99,8 +99,8 @@ public class UserManagementController {
             model.addAttribute("message", e.getMessage());
         }
         return new ModelAndView("admin/user/management")
-                .addObject("users", userService.getUsers());
-
+                    .addObject("users", userService.getUsers());
+  
     }
 
     // Delete User
@@ -112,8 +112,8 @@ public class UserManagementController {
             System.out.println(e);
         }
         return new ModelAndView("admin/user/management")
-                .addObject("users", userService.getUsers());
-
+                    .addObject("users", userService.getUsers());
+  
     }
 
 }

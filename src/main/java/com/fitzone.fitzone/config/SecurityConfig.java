@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -17,15 +18,20 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    private final String[] PUBLIC_URLS = {"/css/**", "/js/**", "/image/**", "/home", "/home/**", "/login", "/register"};
+    private final String[] PUBLIC_URLS = {"/css/**", "/js/**", "/image/**","/home/**", "/login", "/register"};
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(10);
     }
 
-    @SuppressWarnings("deprecation")
     @Bean
+    public UserDetailsService userDetailsService() {
+        return new UserDetailServiceImpl();
+    }
+
+    @SuppressWarnings("deprecation")
+        @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests(authorizeRequests ->
@@ -39,7 +45,7 @@ public class SecurityConfig {
                         formLogin
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/default", true)
+                                .defaultSuccessUrl("/default")
                                 .failureUrl("/login?error=true")
                                 .permitAll()
                 )
@@ -50,7 +56,7 @@ public class SecurityConfig {
                                 .permitAll()
                 )
                 .exceptionHandling( exceptionHandling -> exceptionHandling
-                        .accessDeniedPage("/no-access")
+                    .accessDeniedPage("/no-access")
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
@@ -65,7 +71,7 @@ public class SecurityConfig {
 
     @Bean
     public AuthenticationManager authenticationManager(
-            UserDetailServiceImpl userDetailsService,
+            UserDetailsService userDetailsService,
             PasswordEncoder passwordEncoder) {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService);

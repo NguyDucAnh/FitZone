@@ -19,11 +19,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserEntity user;
-        try {
-            user = userService.getUserByUsername(username);
-        } catch (Exception ex) {
-            throw new UsernameNotFoundException("User not found: " + username, ex);
+        UserEntity user = userService.getUserByUsername(username);
+        if (user == null) {
+            return null;
         }
 
         SimpleGrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + user.getRoles());

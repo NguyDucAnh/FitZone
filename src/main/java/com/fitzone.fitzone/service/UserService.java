@@ -43,6 +43,4 @@ public interface UserService {
     // Add Address
     public void deleteAddress(Long addressId);
 
-    // Checkout
-    public String checkout(Long userId, Long addressId);
 }

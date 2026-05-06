@@ -4,26 +4,20 @@ import com.fitzone.fitzone.dto.request.AddressRequest;
 import com.fitzone.fitzone.dto.request.CreateUserRequest;
 import com.fitzone.fitzone.dto.request.UpdateUserRequest;
 import com.fitzone.fitzone.dto.response.UserResponse;
-import com.fitzone.fitzone.entity.*;
+import com.fitzone.fitzone.entity.AddressEntity;
+import com.fitzone.fitzone.entity.UserEntity;
 import com.fitzone.fitzone.enums.RoleEnum;
 import com.fitzone.fitzone.enums.StatusEnum;
-//import com.fitzone.fitzone.enums.StatusOrderEnum;
 import com.fitzone.fitzone.exception.AppException;
 import com.fitzone.fitzone.exception.ErrorCode;
 import com.fitzone.fitzone.mapper.UserMapper;
 import com.fitzone.fitzone.repository.AddressRepository;
-import com.fitzone.fitzone.repository.CartRepository;
-import com.fitzone.fitzone.repository.OrderDetailRepository;
-import com.fitzone.fitzone.repository.OrderRepository;
-import com.fitzone.fitzone.repository.ProductRepository;
 import com.fitzone.fitzone.repository.UserRepository;
 import com.fitzone.fitzone.service.CloudinaryService;
 import com.fitzone.fitzone.service.UserService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
@@ -46,18 +40,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private AddressRepository addressRepository;
-
-    @Autowired
-    private OrderRepository orderRepository;
-
-    @Autowired
-    private OrderDetailRepository orderDetailRepository;
-
-    @Autowired
-    private CartRepository cartRepository;
-
-    @Autowired
-    private ProductRepository productRepository;
 
     // View user quantity
     @Override
@@ -203,52 +185,5 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteAddress(Long addressId){
         addressRepository.deleteById(addressId);
-    }
-
-    @Override
-    @Transactional
-    public String checkout(Long userId, Long addressId){
-        OrderEntity newOrder = new OrderEntity();
-
-        UserEntity user = userRepository.findByIdAndStatus(userId, StatusEnum.Active);
-
-        AddressEntity address = addressRepository.findById(addressId).get();
-        List<OrderDetailEntity> orderDetails = new ArrayList<>();
-
-        Long totalOrder = 0L;
-        for(CartEntity cart : user.getCarts()){
-            OrderDetailEntity item = new OrderDetailEntity();
-
-            item.setProduct(cart.getProduct());
-            item.setQuantity(cart.getQuantity());
-            item.setPrice(cart.getProduct().getPrice());
-            item.setDiscount(cart.getProduct().getDiscount());
-            item.setTotal(cart.getProduct().getPrice() * (100 - cart.getProduct().getDiscount()) * cart.getQuantity() / 100);
-            item.setOrder(newOrder);
-
-            totalOrder += item.getTotal();
-
-            orderDetails.add(item);
-            orderDetailRepository.save(item);
-
-            ProductEntity product = cart.getProduct();
-            product.setQuantity(product.getQuantity() - cart.getQuantity());
-            product.setQuantitySell(product.getQuantitySell() + cart.getQuantity());
-            productRepository.save(product);
-        }
-
-//        newOrder.setUser(user);
-//        newOrder.setTotal(totalOrder);
-//        newOrder.setQuantity(Long.valueOf(orderDetails.size()));
-//        newOrder.setDate(new Date());
-//        newOrder.setAddress(address.getAddress());
-//        newOrder.setPhone(address.getPhone());
-//        newOrder.setStatus(StatusOrderEnum.Dang_Xu_Ly);
-
-        orderRepository.save(newOrder);
-
-        cartRepository.deleteByUserId(userId);
-
-        return "Sản phẩm đang được chuẩn bị để giao, Xem chi tiết tại lịch sử mua hàng";
     }
 }

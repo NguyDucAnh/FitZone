@@ -1,8 +1,5 @@
 package com.fitzone.fitzone.utils;
 
-import com.fitzone.fitzone.entity.UserEntity;
-import com.fitzone.fitzone.enums.StatusEnum;
-import com.fitzone.fitzone.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

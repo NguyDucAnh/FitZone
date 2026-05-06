@@ -1,13 +1,12 @@
 package com.fitzone.fitzone.entity;
 
+import com.fitzone.fitzone.enums.StatusEnum;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 import java.util.List;
-
-import com.fitzone.fitzone.enums.StatusEnum;
 
 @Data
 @Builder

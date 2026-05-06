@@ -1,13 +1,12 @@
 package com.fitzone.fitzone.entity;
 
+import com.fitzone.fitzone.enums.StatusOrderEnum;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Date;
 import java.util.List;
-
-//import com.lalaclothes.lalaclothes.enums.StatusOrderEnum;
 
 @Data
 @Builder
@@ -36,9 +35,9 @@ public class OrderEntity {
     @Column(name = "phone")
     String phone;
 
-//    @Enumerated(EnumType.STRING)
-//    @Column(name = "status_order")
-//    StatusOrderEnum status;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status_order")
+    StatusOrderEnum status;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

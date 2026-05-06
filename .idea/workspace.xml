@@ -4,17 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="change DefaultController and SecurityController">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/management.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/information.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/register.html" afterDir="false" />
+    <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="commit frontend-user">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/BrandManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/CategoryManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/ProductManagementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/WebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/request/SearchRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/BrandResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/CategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/DailyRevenue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/OrderDetailResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/OrderResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/CommentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/enums/SizeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/enums/SortEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/enums/StatusOrderEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/mapper/BrandMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/mapper/OrderDetailMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/BrandService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/CartServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/productManagement.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/web/product-detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/productManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/brand/management.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/management.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/product/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/user/notification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/introduce.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/config/ApplicationInitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/config/ApplicationInitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/UserManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/admin/UserManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/DefaultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/ErrorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/dto/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/customer/ProductRepositoryCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/customer/ProductRepositoryCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/customer/impl/ProductRepositoryCustomerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/customer/impl/ProductRepositoryCustomerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/UserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/UserDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/GetUserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/GetUserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/image/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/image/logo.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,46 +110,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.FitZoneApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JavaWeb/FitZone/src/main/resources/templates/web",
-    "onboarding.tips.debug.path": "D:/JavaWeb/FitZone/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.FitZoneApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaWeb/FitZone/src/main/resources/templates/web&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/JavaWeb/FitZone/src/main/java/org/example/Main.java&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\web" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\user" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
-      <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone" />
-      <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone\repository\customer" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\user" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\product" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\static\image" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\static\image" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.fitzome.fitzome.dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.fitzone.fitzone.service" />
-      <recent name="com.fitzone.fitzone.dto.response" />
-      <recent name="com.fitzone.fitzone.mapper" />
       <recent name="com.fitzone.fitzone.service.impl" />
+      <recent name="com.fitzone.fitzone.service" />
       <recent name="com.fitzone.fitzone.repository.customer" />
+      <recent name="com.fitzone.fitzone.repository.customer.impl" />
+      <recent name="com.fitzone.fitzone.repository" />
     </key>
   </component>
   <component name="SharedIndexes">

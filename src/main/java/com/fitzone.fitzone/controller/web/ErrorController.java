@@ -11,5 +11,5 @@ public class ErrorController {
     public ModelAndView getMethodName() {
         return new ModelAndView("web/no-access");
     }
-
+    
 }

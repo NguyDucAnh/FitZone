@@ -2,10 +2,9 @@ package com.fitzone.fitzone.repository;
 
 import com.fitzone.fitzone.entity.UserEntity;
 import com.fitzone.fitzone.enums.StatusEnum;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     UserEntity findByUsername(String username);

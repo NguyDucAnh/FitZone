@@ -56,12 +56,12 @@ public class UserEntity {
     @Column(name = "status_user")
     StatusEnum status;
 
-//    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-//    List<OrderEntity> orders;
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    List<OrderEntity> orders;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    List<com.fitzone.fitzone.entity.CartEntity> carts;
+    List<CartEntity> carts;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
-    List<com.fitzone.fitzone.entity.AddressEntity> addresses;
+    List<AddressEntity> addresses;
 }

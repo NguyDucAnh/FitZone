@@ -1,10 +1,9 @@
 package com.fitzone.fitzone.config;
-
 import com.fitzone.fitzone.entity.UserEntity;
 import com.fitzone.fitzone.enums.RoleEnum;
 import com.fitzone.fitzone.enums.StatusEnum;
-//import com.fitzone.fitzone.repository.BrandRepository;
-//import com.fitzone.fitzone.repository.CategoryRepository;
+import com.fitzone.fitzone.repository.BrandRepository;
+import com.fitzone.fitzone.repository.CategoryRepository;
 import com.fitzone.fitzone.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationRunner;
@@ -18,7 +17,9 @@ public class ApplicationInitConfig {
     PasswordEncoder passwordEncoder;
 
     @Bean
-    ApplicationRunner applicationRunner(UserRepository userRepository) {
+    ApplicationRunner applicationRunner(UserRepository userRepository, 
+                                        BrandRepository brandRepository,
+                                        CategoryRepository categoryRepository) {
         return args -> {
             if (userRepository.findByUsername("admin") == null) {
 
@@ -33,5 +34,4 @@ public class ApplicationInitConfig {
         };
     }
 }
-
 
