@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="Update QLSP">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/upload/ExcelProductHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/upload/ProductExcelService.java" afterDir="false" />
+    <list default="true" id="664e754f-89fb-4bd9-b0ad-9574a2a4fecc" name="Changes" comment="update upload(exel)">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/category/management.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/category/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/web/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/user/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/controller/web/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/GetUserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/utils/GetUserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/BrandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/BrandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fitzone.fitzone/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/user/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/notification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/web/introduce.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/web/introduce.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JavaWeb/FitZone/src/main/java/com/fitzone.fitzone/utils",
+    "last_opened_file_path": "D:/JavaWeb/FitZone/src/main/resources/templates/web",
     "onboarding.tips.debug.path": "D:/JavaWeb/FitZone/src/main/java/org/example/Main.java"
   },
   "keyToStringList": {
@@ -73,11 +75,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaWeb\FitZone\src\main\java\com\fitzone.fitzone\utils" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\web" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
       <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\user" />
-      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\product" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\user" />
+      <recent name="D:\JavaWeb\FitZone\src\main\resources\templates\admin\category" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JavaWeb\FitZone\src\main\resources\static\image" />
@@ -142,14 +144,24 @@
       <option name="project" value="LOCAL" />
       <updated>1778078391249</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update upload(exel)">
+      <option name="closed" value="true" />
+      <created>1778079769311</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778079769311</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="change DefaultController and SecurityConfig" />
     <MESSAGE value="Update QLSP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update QLSP" />
+    <MESSAGE value="update upload" />
+    <MESSAGE value="update upload(exel)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update upload(exel)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
