@@ -76,8 +76,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductResponse getProductById(Long productId) {
-        ProductEntity product = productRepository.findByIdAndStatusWithImages(productId, StatusEnum.Active);
-        return productMapper.toProductResponse(product);
+        return productMapper.toProductResponse(productRepository.findByIdAndStatus(productId, StatusEnum.Active));
     }
 
     @Override

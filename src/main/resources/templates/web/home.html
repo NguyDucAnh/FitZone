@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Chủ | FitZone</title>
+    <title>Trang Chủ | Fit Zone</title>
     <!-- Liên kết đến Font Awesome cho biểu tượng -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -32,7 +32,7 @@
             class="d-flex align-items-center text-decoration-none"
           >
             <img class="logo" th:src="@{/image/logo.jpg}" alt="Logo" />
-            <h1 class="header-title">FitZone</h1>
+            <h1 class="header-title">Fit Zone</h1>
           </a>
 
           <div class="d-flex align-items-center">
@@ -247,12 +247,12 @@
                     <div>
                       <span class="original-price text-muted" 
                             style="text-decoration: line-through;" 
-                            th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 2, 'POINT')} + ' $'">
                      Giá gốc
                       </span>
 
                       <span class="product-price text-danger" 
-                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'COMMA', 2, 'POINT')} + ' $'">
                     Giá khuyến mại
                       </span>
                     </div>
@@ -302,12 +302,12 @@
                     <div>
                       <span class="original-price text-muted" 
                             style="text-decoration: line-through;" 
-                            th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 2, 'POINT')} + ' $'">
                      Giá gốc
                       </span>
 
                       <span class="product-price text-danger" 
-                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'COMMA', 2, 'POINT')} + ' $'">
                     Giá khuyến mại
                       </span>
                     </div>
@@ -387,12 +387,12 @@
                     <div>
                       <span class="original-price text-muted" 
                             style="text-decoration: line-through;" 
-                            th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 2, 'POINT')} + ' $'">
                      Giá gốc
                       </span>
 
                       <span class="product-price text-danger" 
-                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'COMMA', 2, 'POINT')} + ' $'">
                     Giá khuyến mại
                       </span>
                     </div>
@@ -442,12 +442,12 @@
                     <div>
                       <span class="original-price text-muted" 
                             style="text-decoration: line-through;" 
-                            th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 2, 'POINT')} + ' $'">
                      Giá gốc
                       </span>
 
                       <span class="product-price text-danger" 
-                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                            th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'COMMA', 2, 'POINT')} + ' $'">
                     Giá khuyến mại
                       </span>
                     </div>
@@ -523,7 +523,7 @@
         </div>
       </div>
       <div class="container text-center">
-        <p>&copy; 2024 Lala Clothes. All Rights Reserved.</p>
+        <p>&copy; 2024 Fit Zone. All Rights Reserved.</p>
         <a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a>
       </div>
     </footer>

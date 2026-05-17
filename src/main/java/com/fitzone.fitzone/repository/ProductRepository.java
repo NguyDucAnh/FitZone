@@ -6,8 +6,6 @@ import com.fitzone.fitzone.repository.customer.ProductRepositoryCustomer;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -27,9 +25,6 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>, P
     ProductEntity findByNameAndStatus(String name, StatusEnum status);
 
     ProductEntity findByIdAndStatus(Long productId, StatusEnum status);
-
-    @Query("SELECT p FROM ProductEntity p LEFT JOIN FETCH p.images WHERE p.id = :productId AND p.status = :status")
-    ProductEntity findByIdAndStatusWithImages(@Param("productId") Long productId, @Param("status") StatusEnum status);
 
     List<ProductEntity> findByNameContainingOrDescriptionContainingAndStatus(String name, String description, StatusEnum status);
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tìm Kiếm Sản Phẩm - Phone Shop</title>
+    <title>Tìm Kiếm Sản Phẩm - Fit Zone</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -486,7 +486,7 @@
             class="d-flex align-items-center text-decoration-none"
           >
             <img class="logo" th:src="@{/image/logo.jpg}" alt="Logo" />
-            <h1 class="header-title">Lala Clothes</h1>
+            <h1 class="header-title">Fit Zone</h1>
           </a>
 
           <div class="d-flex align-items-center">
@@ -539,6 +539,9 @@
                 <div class="dropdown-menu" aria-labelledby="userDropdown">
                   <a class="dropdown-item" th:href="@{/user/info}">
                     <i class="fas fa-user-circle"></i> Thông tin tài khoản
+                  </a>
+                  <a class="dropdown-item" th:href="@{/user/history}">
+                    <i class="fas fa-history"></i> Lịch sử đn hàng
                   </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" th:href="@{/logout}">
@@ -700,7 +703,7 @@
           </div>
           <h5 class="product-name" th:text="${product.name}">Product Name</h5>
           <div class="d-flex justify-content-center align-items-center">
-            <span class="product-price" th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'"
+            <span class="product-price" th:text="${product.price + ' $'}"
               >Price</span
             >
             <span
@@ -792,7 +795,7 @@
         </div>
       </div>
       <div class="container text-center">
-        <p>&copy; 2024 Lala Clothes. All Rights Reserved.</p>
+        <p>&copy; 2024 Fit Zone. All Rights Reserved.</p>
         <a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a>
       </div>
     </footer>

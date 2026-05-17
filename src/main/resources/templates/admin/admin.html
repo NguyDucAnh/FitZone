@@ -395,7 +395,7 @@
           <div class="card">
             <i class="fas fa-coins icon"></i>
             <h5>Tổng Doanh Thu</h5>
-            <p th:if="${increase}" th:text="${#numbers.formatDecimal(increase, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">0 VNĐ</p>
+            <p th:if="${increase}" th:text="${increase + '$'}">0$</p>
           </div>
         </div>
 
@@ -416,7 +416,7 @@
             data: {
               labels: labels,
               datasets: [{
-                label: 'Doanh Thu (VNĐ)',
+                label: 'Doanh Thu ($)',
                 data: data,
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
@@ -435,7 +435,7 @@
                 y: {
                   title: {
                     display: true,
-                    text: 'Doanh Thu (VNĐ)'
+                    text: 'Doanh Thu ($)'
                   },
                   beginAtZero: true
                 }

@@ -1,4 +1,5 @@
 package com.fitzone.fitzone.config;
+
 import com.fitzone.fitzone.entity.UserEntity;
 import com.fitzone.fitzone.enums.RoleEnum;
 import com.fitzone.fitzone.enums.StatusEnum;

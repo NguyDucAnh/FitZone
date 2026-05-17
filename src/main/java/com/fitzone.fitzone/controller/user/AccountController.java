@@ -5,10 +5,13 @@ import com.fitzone.fitzone.dto.request.CreateUserRequest;
 import com.fitzone.fitzone.dto.request.UpdateUserRequest;
 import com.fitzone.fitzone.entity.UserEntity;
 import com.fitzone.fitzone.enums.GenderEnum;
+import com.fitzone.fitzone.service.CartService;
+import com.fitzone.fitzone.service.OrderService;
 import com.fitzone.fitzone.service.UserService;
 import com.fitzone.fitzone.utils.GetUserAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +24,12 @@ public class AccountController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private CartService cartService;
+
+    @Autowired
+    private OrderService orderService;
 
     @GetMapping("/info")
     public ModelAndView viewUser(){
@@ -65,4 +74,23 @@ public class AccountController {
         return "redirect:/user/info";
     }
 
+    @GetMapping("/checkout/{addressId}")
+    public ModelAndView checkout(@PathVariable Long addressId, Model model){
+        UserEntity user = getUserAuthentication.getUser();
+
+        String message = userService.checkout(user.getId(), addressId);
+        model.addAttribute("message", message);
+
+        return new ModelAndView("/user/cart")
+                .addObject("carts", cartService.getCart(user.getId()))
+                .addObject("user", user);
+    }
+
+    @GetMapping("/history")
+    public ModelAndView historyBuyProduct(){
+        UserEntity user = getUserAuthentication.getUser();
+        
+        return new ModelAndView("/user/history")
+                .addObject("orders", orderService.historyBuy(user.getId()));
+    }
 }

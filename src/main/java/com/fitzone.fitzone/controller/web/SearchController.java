@@ -56,7 +56,7 @@ public class SearchController {
 
     @PostMapping("/home/search")
     public ModelAndView search(@ModelAttribute("newSearch") SearchRequest request,
-                          @RequestParam(defaultValue = "0") int page) {
+                            @RequestParam(defaultValue = "0") int page) {
         int size = 8;
         ModelAndView mav = new ModelAndView("/web/search");
         Page<ProductResponse> productPage = productService.searchProduct(request, page, size);
@@ -76,7 +76,7 @@ public class SearchController {
 
         return mav;
     }
-  
+   
     @PostMapping("/home/search-name")
         public ModelAndView searchProductByName(@RequestParam(required = false) String name) {
             SearchRequest newSearch = new SearchRequest();

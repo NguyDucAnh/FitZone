@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chi Tiết Sản Phẩm | Lala Clothes</title>
+    <title>Chi Tiết Sản Phẩm | Fit Zone</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,7 +26,7 @@
             class="d-flex align-items-center text-decoration-none"
           >
             <img class="logo" th:src="@{/image/logo.jpg}" alt="Logo" />
-            <h1 class="header-title">Lala Clothes</h1>
+            <h1 class="header-title">Fit Zone</h1>
           </a>
 
           <div class="d-flex align-items-center">
@@ -113,8 +113,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="product-gallery">
-              
-              <div class="main-image">
+              <!-- <div class="main-image">
                 <img
                   th:src="${product.images[0].imageLink}"
                   alt="Product Image"
@@ -167,13 +166,13 @@
                 <!-- Giá gốc (gạch ngang) -->
                  <span class="original-price text-muted"
                       style="text-decoration: line-through;"
-                      th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                      th:text="${#numbers.formatDecimal(product.price, 0, 'COMMA', 2, 'POINT')} + ' $'">
                    Original Price
                  </span>
 
                 <!-- Giá sau khi giảm -->
                  <span class="product-price text-danger ms-2"
-                       th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'POINT', 0, 'COMMA')} + ' VNĐ'">
+                       th:text="${#numbers.formatDecimal(product.price * (1 - product.discount / 100.0), 0, 'COMMA', 2, 'POINT')} + ' $'">
                    Discounted Price
                  </span>
 
@@ -369,7 +368,7 @@
         </div>
       </div>
       <div class="container text-center">
-        <p>&copy; 2024 Lala Clothes. All Rights Reserved.</p>
+        <p>&copy; 2024 Fit Zone. All Rights Reserved.</p>
         <a href="#">Chính sách bảo mật</a> | <a href="#">Điều khoản sử dụng</a>
       </div>
     </footer>

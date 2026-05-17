@@ -558,7 +558,7 @@
           </div>
             <div class="info-card">
                 <div class="info-label">Giá</div>
-                <div class="info-value" th:text="${#numbers.formatDecimal(product.price, 0, 'POINT', 0, 'COMMA')} + ' VNĐ'"></div>
+                <div class="info-value" th:text="${product.price + '$'}"></div>
             </div>
             <div class="info-card">
                 <div class="info-label">Giảm giá</div>
